@@ -1,0 +1,7 @@
+{
+  "name": "CivicLedger",
+  "description": "A futuristic web platform that connects citizens with their local government to report, track, and resolve civic issues transparently using AI and blockchain technology.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

@@ -1,0 +1,73 @@
+
+import { CivicIssue, IssueStatus, LeaderboardUser } from './types';
+
+export const MOCK_ISSUES: CivicIssue[] = [
+  {
+    id: 'issue-1',
+    type: 'Pothole',
+    severity: 'High',
+    description: 'Large pothole causing traffic issues on Main St.',
+    imageUrl: 'https://picsum.photos/seed/pothole/400/300',
+    status: IssueStatus.Reported,
+    location: { lat: 34.0522, lng: -118.2437, address: '123 Main St, Los Angeles' },
+    reportedBy: 'user-1',
+    timestamp: '2023-10-26T10:00:00Z',
+    upvotes: 15,
+  },
+  {
+    id: 'issue-2',
+    type: 'Graffiti',
+    severity: 'Low',
+    description: 'Graffiti on the wall of the public library.',
+    imageUrl: 'https://picsum.photos/seed/graffiti/400/300',
+    status: IssueStatus.InProgress,
+    location: { lat: 34.0530, lng: -118.2445, address: '456 Library Ave, Los Angeles' },
+    reportedBy: 'user-2',
+    timestamp: '2023-10-25T14:30:00Z',
+    upvotes: 5,
+  },
+  {
+    id: 'issue-3',
+    type: 'Broken Streetlight',
+    severity: 'Medium',
+    description: 'Streetlight out on the corner of Oak & Pine.',
+    imageUrl: 'https://picsum.photos/seed/streetlight/400/300',
+    status: IssueStatus.Resolved,
+    location: { lat: 34.0550, lng: -118.2500, address: '789 Oak St, Los Angeles' },
+    reportedBy: 'user-1',
+    timestamp: '2023-10-24T20:00:00Z',
+    upvotes: 8,
+  },
+    {
+    id: 'issue-4',
+    type: 'Fallen Tree',
+    severity: 'High',
+    description: 'A large tree has fallen and is blocking the road on Elm Street.',
+    imageUrl: 'https://picsum.photos/seed/tree/400/300',
+    status: IssueStatus.Reported,
+    location: { lat: 34.0495, lng: -118.2550, address: '101 Elm St, Los Angeles' },
+    reportedBy: 'user-3',
+    timestamp: '2023-10-27T08:00:00Z',
+    upvotes: 25,
+  },
+  {
+    id: 'issue-5',
+    type: 'Overflowing Trash Can',
+    severity: 'Low',
+    description: 'Public trash can at the park is overflowing.',
+    imageUrl: 'https://picsum.photos/seed/trash/400/300',
+    status: IssueStatus.Resolved,
+    location: { lat: 34.0600, lng: -118.2600, address: 'City Park, Los Angeles' },
+    reportedBy: 'user-2',
+    timestamp: '2023-10-26T12:00:00Z',
+    upvotes: 3,
+  },
+];
+
+export const MOCK_LEADERBOARD: LeaderboardUser[] = [
+    { name: 'Alice Johnson', points: 250 },
+    { name: 'Bob Smith', points: 210 },
+    { name: 'Charlie Brown', points: 180 },
+    { name: 'Diana Prince', points: 150 },
+    { name: 'Ethan Hunt', points: 120 },
+];
