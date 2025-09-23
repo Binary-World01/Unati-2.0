@@ -1,4 +1,3 @@
-
 import React, { useState, useMemo } from 'react';
 import { User, CivicIssue, IssueStatus } from '../types';
 import { MOCK_ISSUES } from '../constants';
@@ -225,7 +224,7 @@ const GovernmentDashboard: React.FC<DashboardProps> = ({ user, onLogout }) => {
                      <ResponsiveContainer width="100%" height={300}>
                         <PieChart>
                           {/* FIX: The 'percent' prop from recharts can be undefined, which would cause a type error in the arithmetic operation. Added a fallback to 0 to prevent this. */}
-                          <Pie data={pieChartData} cx="50%" cy="50%" labelLine={false} outerRadius={80} fill="#8884d8" dataKey="value" label={({ name, percent }) => `${name} ${((percent || 0) * 100).toFixed(0)}%`}>
+                          <Pie data={pieChartData} cx="50%" cy="50%" labelLine={false} outerRadius={80} fill="#8884d8" dataKey="value" label={({ name, percent }: {name: string, percent?: number}) => `${name} ${((percent || 0) * 100).toFixed(0)}%`}>
                             {pieChartData.map((entry, index) => (<Cell key={`cell-${index}`} fill={PIE_COLORS[index % PIE_COLORS.length]} />))}
                           </Pie>
                            <Tooltip contentStyle={{ backgroundColor: '#1e293b', border: '1px solid #334155' }} />
